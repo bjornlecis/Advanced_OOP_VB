@@ -1,3 +1,6 @@
+import threading
+import time
+
 def print_letters():
     for letter in ['a', 'b', 'c', 'd', 'e']:
         print("Thread 2: ", letter)
@@ -10,7 +13,6 @@ def print_letters():
             print("Thread 2 hervat Thread 1.")
 
 # Threads initialiseren
-thread1 = threading.Thread(target=print_numbers)
 thread2 = threading.Thread(target=print_letters)
 
 # Start de threads

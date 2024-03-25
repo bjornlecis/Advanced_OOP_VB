@@ -2,8 +2,8 @@ import threading
 import time
 
 # Functie voor de eerste thread
-def print_numbers():
-    for i in range(1, 6):
+def print_numbers(tot):
+    for i in range(1, tot+1):
         print("Thread 1: ", i)
         time.sleep(1)
 
@@ -11,10 +11,10 @@ def print_numbers():
 def print_letters():
     for letter in ['a', 'b', 'c', 'd', 'e']:
         print("Thread 2: ", letter)
-        time.sleep(1)
+        time.sleep(2)
 
 # Threads initialiseren
-thread1 = threading.Thread(target=print_numbers)
+thread1 = threading.Thread(target=print_numbers,args=(11,))
 thread2 = threading.Thread(target=print_letters)
 
 # Start de threads

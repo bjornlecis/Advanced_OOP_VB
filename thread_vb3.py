@@ -8,7 +8,7 @@ def print_message(message, delay):
         time.sleep(delay)
 
 # Thread initialiseren met parameters
-thread = threading.Thread(target=print_message, args=("Dit is een bericht.", 2))
+thread = threading.Thread(target=print_message, args=("Dit is een bericht.", 3.2))
 
 # Start de thread
 thread.start()
